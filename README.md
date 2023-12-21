@@ -30,6 +30,7 @@ To explore whether it is easier to develop ML applications using "Text Classific
 
 #### Stating hypotheses
 As for testing the factor of the total number of ML applications developed, I state the null hypothesis that “There is not a greater difference in the number of  "Text Classification" ML applications developed compared with using "Text Generation" ML models.” (H_01)
+
 For analyzing the size of the source of the ML applications repositories, I state the null hypothesis that “There is not a greater difference in the source code size between using "Text Classification" ML applications and using "Text Generation" ML models.”(H_02)
 
 #### Collecting data
@@ -54,7 +55,17 @@ In addition, I made several assumptions prior to the analysis.
 
 In the analysis of comparing the total number of ML applications developed using the top-20 "Text Classification" and top-20 "Text Generation" models, I found that there are more ML applications created using "Text Generation" models, where the total number is 3656 versus 757. See `Figure 1`. As the p-value calculated is 0.0114 less than 0.05 with the Mann-Whitney U test, I reject the H_01 and prove that the number of ML applications developed using "Text Generation" models is much larger than using  "Text Classification" models. Thus, it displays that "Text Generation" models are more popular to develop.
 
+<p align="center">
+  <img src="./images/5 - Comparison on the total number of spaces developed using Text Generation and Text Classification.png" alt="Comparison on the total number of spaces developed using Text Generation and Text Classification" />
+  Figure 1. Comparison on the total number of spaces developed using Text Generation and Text Classification
+</p>
+
 In comparison with the source code size of the ML applications developed using the top-20 "Text Classification" and top-20 "Text Generation" models, I found that the average source code size of ML applications created using "Text Classification" models is relatively smaller than using  "Text Generation" models, where the number is 27.94 MB compared with 690.25 MB using "Text Classification" models. See `Figure 2`. As the p-value calculated is 0.002 less than 0.05 with the Mann-Whitney U test, I reject the H_02 and prove that the source code size of ML applications developed using "Text Generation" models is much larger than using "Text Classification" models. Thus, this display that developing ML applications using "Text Generation" models is more complex.
+
+<p align="center">
+  <img src="./images/8 - Comparison on the average source code size of spaces developed using Text Generation and Text Classification.png" alt="Comparison on the average source code size of spaces developed using Text Generation and Text Classification" />
+  Figure 2. Comparison on the average source code size of spaces developed using Text Generation and Text Classification
+</p>
 
 Considering the findings on both factors, I believe that although more developers choose to use  "Text Generation" models to develop ML applications, the average source code size of those application repositories is much larger than using “Text Classification” models, indicating a greater code complexity. This also implies that developers who leverage  "Text Generation" models need to make more efforts to develop external functionalities. 
 
@@ -65,4 +76,6 @@ In addition, there are several limitations for the reliability of the findings.
 - **Not perfect mutually exclusive** There are 11 ML applications using models from both  "Text Classification" and "Text Generation".
 
 ## Future Improvements
-- **Add time periods** I believe it is necessary to consider collecting the data in a designated period of time, such as the recent 6 months. This could enhance the accuracy of the results, and also collect the up-to-date data 
+- **Add time periods** I believe it is necessary to consider collecting the data in a designated period of time, such as the recent 6 months. This could ensure two groups of data are coming from the same period. 
+- **Research PR commits** It is better to consider exploring the number of PR commits made in the repositories developed using "Text Classification" and "Text Generation" to evaluate the effort needed from developers. 
+- **Alternative way of defining popularity** To better understand the preferences of developers, it is better to consider proposing the analysis using the trending (the total number of likes within 7 days) to collect recent information for the utilization of ML models.
