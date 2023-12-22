@@ -1,22 +1,27 @@
 # Analysis of Machine Learning (ML) Applications on HuggingFace store
 
-This project performs a study of ML applications hosted on the [HuggingFace](https://huggingface.co/spaces) ML store. In particular, I investigate the ML applications classified in "Text Classification" and “Text Generation” groups, defined as the filters from the Hugging Face website. In comparison with the total number of ML applications and the source code size of the ML applications developed with "Text Classification" and “Text Generation” models, I draw a conclusion of 'it is easier to develop ML applications using "Text Classification" models than applications using "Text Generation" models.
+This project performs a study of ML applications hosted on the [HuggingFace](https://huggingface.co/spaces) ML store. In particular, I investigate the ML applications classified in “Text Classification” and “Text Generation” groups, defined as the filters from the Hugging Face website. In comparison with the total number of ML applications and the source code size of the ML applications developed with “Text Classification” and “Text Generation” models, I conclude that it is easier to develop ML applications using “Text Classification” models than applications using “Text Generation” models.
 ## Build tools & versions used
 - Python, 3.11.5
 - Jupyter Notebook, 7.0.6
+- JupyterLab, 4.0.8
 - Anaconda, 2.5.1
 - [Hugging Face Hub API](https://huggingface.co/docs/huggingface_hub/package_reference/hf_api)
-- Plotly to perform data visualization 
 
 ## Steps to run the app
-1. Download or clone source codes from GitHub
+1. Install Anaconda to be able to set up environment for running the Python notebook
+2. Install Jupyter Notebook and JupyterLab environments
+3. Initialize an environment to display and run the notebook
+4. Download or clone source codes from GitHub
 ```
 $ git clone https://github.com/AM-Kitty/MLAppsAnalysis.git
 ```
-2. Install Anaconda to be able to set up environment for running the Python application
-3. Install Jupyter Notebook environment
-4. Initialize Jupyter Notebook environment
-5. Run the application and you will see the code used for the entire analysis
+5. Install all required packages in `requirements.txt`
+```shell
+$ cd ./MLAppsAnalysis/
+$ pip install -r ./requirements.txt
+```
+6. Run the application and open the notebook to check the code and outputs for the entire analysis
 
 ## Purpose of Project
 
@@ -24,14 +29,14 @@ This project aims to understand whether "Text Classification" ML models are easi
 
 ## Analysis Design
 
-The analysis is based on the top-20 "Text Classification" and top-20 "Text Generation" models filtered from [HuggingFace](https://huggingface.co/models), ranked according to popularity. Specifically, I used the total number of downloads of each model to evaluate the popularity, where the higher the total number of downloads, the more popular the model is. 
+The analysis is based on the top-20 “Text Classification” and top-20 “Text Generation” models filtered from [HuggingFace](https://huggingface.co/models), ranked according to popularity. Specifically, I used the total number of downloads of each model to evaluate the popularity, where the higher the total number of downloads, the more popular the model is.
 
-To explore whether it is easier to develop ML applications using "Text Classification" models than applications using "Text Generation" models, the whole analysis mainly explore the two factors, the total number of ML applications developed using the models from the two groups and the size of the source code of those ML applications repositories, and their impact on affecting the popularity of ML models. The whole analyzing process consists of 4 parts including stating hypotheses, collecting data, performing statistical tests and testing the hypothesis.
+To explore whether it is easier to develop ML applications using “Text Classification” models than applications using “Text Generation” models, the whole analysis mainly explore the two factors, the total number of ML applications developed using the models from the two groups and the size of the source code of those ML applications repositories, and their impact on affecting the popularity of ML models. The whole analyzing process consists of 4 parts including stating hypotheses, collecting data, performing statistical tests and testing the hypothesis.
 
 #### Stating hypotheses
-As for testing the factor of the total number of ML applications developed, I state the null hypothesis that “There is not a greater difference in the number of  "Text Classification" ML applications developed compared with using "Text Generation" ML models.” (H_01)
+As for testing the factor of the total number of ML applications developed, I state the null hypothesis that “There is not a greater difference in the number of “Text Classification” ML applications developed compared with using “Text Generation” ML models.” (H<sub>01</sub>)
 
-For analyzing the size of the source of the ML applications repositories, I state the null hypothesis that “There is not a greater difference in the source code size between using "Text Classification" ML applications and using "Text Generation" ML models.”(H_02)
+For analyzing the size of the source of the ML applications repositories, I state the null hypothesis that “There is not a greater difference in the source code size between using “Text Classification” ML applications and using “Text Generation” ML models.”(H<sub>02</sub>)
 
 #### Collecting data
 
@@ -72,8 +77,8 @@ Considering the findings on both factors, I believe that although more developer
 In addition, there are several limitations for the reliability of the findings.
 
 #### Limitations
-- **Small sample size** The number of ML applications collected is only based on the top 20 ML models, which consists of 757 ML applications developed with "Text Classification".
-- **Not perfect mutually exclusive** There are 11 ML applications using models from both  "Text Classification" and "Text Generation".
+- **Small sample size** The number of ML applications collected is only based on the top 20 ML models, which consists of 757 ML applications developed with “Text Classification”.
+- **Not perfect mutually exclusive** There are 11 ML applications using models from both “Text Classification” and “Text Generation”.
 
 ## Future Improvements
 - **Add time periods** I believe it is necessary to consider collecting the data in a designated period of time, such as the recent 6 months. This could ensure two groups of data are coming from the same period. 
