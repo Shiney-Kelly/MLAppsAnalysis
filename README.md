@@ -61,14 +61,14 @@ In addition, I made several assumptions prior to the analysis.
 In the analysis of comparing the total number of ML applications developed using the top-20 "Text Classification" and top-20 "Text Generation" models, I found that there are more ML applications created using "Text Generation" models, where the total number is 3656 versus 757. See `Figure 1`. As the p-value calculated is 0.0114 less than 0.05 with the Mann-Whitney U test, I reject the H_01 and prove that the number of ML applications developed using "Text Generation" models is much larger than using  "Text Classification" models. Thus, it displays that "Text Generation" models are more popular to develop.
 
 <p align="center">
-  <img src="./images/5 - Comparison on the total number of spaces developed using Text Generation and Text Classification.png" alt="Comparison on the total number of spaces developed using Text Generation and Text Classification" />
+  <img src="./output_imgs/5 - Comparison on the total number of spaces developed using Text Generation and Text Classification.png" alt="Comparison on the total number of spaces developed using Text Generation and Text Classification" />
   Figure 1. Comparison on the total number of spaces developed using Text Generation and Text Classification
 </p>
 
 In comparison with the source code size of the ML applications developed using the top-20 "Text Classification" and top-20 "Text Generation" models, I found that the average source code size of ML applications created using "Text Classification" models is relatively smaller than using  "Text Generation" models, where the number is 27.94 MB compared with 690.25 MB using "Text Classification" models. See `Figure 2`. As the p-value calculated is 0.002 less than 0.05 with the Mann-Whitney U test, I reject the H_02 and prove that the source code size of ML applications developed using "Text Generation" models is much larger than using "Text Classification" models. Thus, this display that developing ML applications using "Text Generation" models is more complex.
 
 <p align="center">
-  <img src="./images/8 - Comparison on the average source code size of spaces developed using Text Generation and Text Classification.png" alt="Comparison on the average source code size of spaces developed using Text Generation and Text Classification" />
+  <img src="./output_imgs/8 - Comparison on the average source code size of spaces developed using Text Generation and Text Classification.png" alt="Comparison on the average source code size of spaces developed using Text Generation and Text Classification" />
   Figure 2. Comparison on the average source code size of spaces developed using Text Generation and Text Classification
 </p>
 
